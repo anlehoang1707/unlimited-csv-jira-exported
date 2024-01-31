@@ -109,3 +109,10 @@ else:
 ## Session State object
 st.header("Session State")
 st.write(st.session_state)
+
+
+
+## Filter the dataframe
+
+with st.sidebar:
+    selected = option_menu("Menu",["Home","Filter",default_index=0])
