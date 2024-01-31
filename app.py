@@ -8,7 +8,7 @@ import plotly.express as px
 from an_lib import get_all_issues_data,get_total_issues_count
 import time
 from streamlit_extras.stateful_button import button
-
+from streamlit_option_menu import option_menu
 
 # Header
 st.header("Turn JQL result into a .CSV (>1000 issues)")
@@ -117,3 +117,5 @@ st.write(st.session_state)
 
 ## Filter the dataframe
 
+with st.sidebar:
+    selected = option_menu("Menu",["Home","Filter",default_index=0])
